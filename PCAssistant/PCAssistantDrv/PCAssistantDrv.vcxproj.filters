@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Common.c" />
+    <ClCompile Include="PCAssistantDrv.c" />
+    <ClCompile Include="Process.c">
+      <Filter>进程</Filter>
+    </ClCompile>
+    <ClCompile Include="Privilege.c">
+      <Filter>进程</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread.c">
+      <Filter>进程</Filter>
+    </ClCompile>
+    <ClCompile Include="Handle.c">
+      <Filter>进程</Filter>
+    </ClCompile>
+    <ClCompile Include="GetFuncAddress.c" />
+    <ClCompile Include="Window.c">
+      <Filter>进程</Filter>
+    </ClCompile>
+    <ClCompile Include="GetSSSDTFuncAddress.c" />
+    <ClCompile Include="Memory.c">
+      <Filter>进程</Filter>
+    </ClCompile>
+    <ClCompile Include="Module.c">
+      <Filter>模块</Filter>
+    </ClCompile>
+    <ClCompile Include="System.c">
+      <Filter>内核</Filter>
+    </ClCompile>
+    <ClCompile Include="CallBack.c">
+      <Filter>内核</Filter>
+    </ClCompile>
+    <ClCompile Include="IOTimer.c">
+      <Filter>内核</Filter>
+    </ClCompile>
+    <ClCompile Include="DPCTimer.c">
+      <Filter>内核</Filter>
+    </ClCompile>
+    <ClCompile Include="FilterDriver.c">
+      <Filter>内核</Filter>
+    </ClCompile>
+    <ClCompile Include="SysThread.c">
+      <Filter>内核</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="PCAssistantDrv.h" />
+    <ClInclude Include="Process.h">
+      <Filter>进程</Filter>
+    </ClInclude>
+    <ClInclude Include="Privilege.h">
+      <Filter>进程</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.h">
+      <Filter>进程</Filter>
+    </ClInclude>
+    <ClInclude Include="Handle.h">
+      <Filter>进程</Filter>
+    </ClInclude>
+    <ClInclude Include="GetFuncAddress.h" />
+    <ClInclude Include="Window.h">
+      <Filter>进程</Filter>
+    </ClInclude>
+    <ClInclude Include="GetSSSDTFuncAddress.h" />
+    <ClInclude Include="Memory.h">
+      <Filter>进程</Filter>
+    </ClInclude>
+    <ClInclude Include="Module.h">
+      <Filter>模块</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>内核</Filter>
+    </ClInclude>
+    <ClInclude Include="CallBack.h">
+      <Filter>内核</Filter>
+    </ClInclude>
+    <ClInclude Include="IOTimer.h">
+      <Filter>内核</Filter>
+    </ClInclude>
+    <ClInclude Include="DPCTimer.h">
+      <Filter>内核</Filter>
+    </ClInclude>
+    <ClInclude Include="FilterDriver.h">
+      <Filter>内核</Filter>
+    </ClInclude>
+    <ClInclude Include="SysThread.h">
+      <Filter>内核</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="进程">
+      <UniqueIdentifier>{e1984c32-1a47-458c-ae29-6ec6f79508e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="模块">
+      <UniqueIdentifier>{8e23ad50-e975-4ab3-86a3-8b87383a8cbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="内核">
+      <UniqueIdentifier>{91143c94-18a1-431e-8bbe-68a9d58dc601}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

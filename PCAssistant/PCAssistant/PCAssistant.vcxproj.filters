@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="主对话框">
+      <UniqueIdentifier>{1e788480-b18b-4de1-9dec-ac23ae308eb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="通用">
+      <UniqueIdentifier>{b4c07e43-7ac0-4f6f-a0f1-bcc48aaf267b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="进程">
+      <UniqueIdentifier>{c180a247-b8d2-4b17-824c-5e6065ec8fe8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="进程\进程信息">
+      <UniqueIdentifier>{830e3f1d-7379-4cfe-b7d3-fa58de5d341f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="模块">
+      <UniqueIdentifier>{bd1f5edd-07fc-4bad-8659-b8e84b1f6e50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="内核钩子">
+      <UniqueIdentifier>{0d9629af-9474-4993-99df-7ca71c575952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="内核钩子\SSDT">
+      <UniqueIdentifier>{75230aa4-8e0f-41e2-826f-63b753c16d57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="内核钩子\内核函数">
+      <UniqueIdentifier>{34657b19-6187-41a6-bd9e-5ac88c27e473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="内核钩子\SSDTShadow">
+      <UniqueIdentifier>{ff07b658-bf55-4276-96dc-445002e5d47b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="内核">
+      <UniqueIdentifier>{881c9505-81fd-4aac-bf5c-6473b8000807}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="内核\系统回调">
+      <UniqueIdentifier>{24510e1e-d5d4-410d-ae25-57788fdc25ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="定时器">
+      <UniqueIdentifier>{e38361b0-773c-4593-9016-550c16120e07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="定时器\IOTimer">
+      <UniqueIdentifier>{53af2568-5d44-4ab7-a284-8eac9122cf8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="定时器\DPCTimer">
+      <UniqueIdentifier>{10086415-5bab-41fa-9054-ceaf59ff39f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="内核\过滤驱动">
+      <UniqueIdentifier>{a1a8e579-6c63-4d34-aca5-8eaaf1e64aa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="内核\内核线程">
+      <UniqueIdentifier>{5e3c60ce-84ce-40aa-a6fe-de679208e2d6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PCAssistantDlg.h">
+      <Filter>主对话框</Filter>
+    </ClInclude>
+    <ClInclude Include="PCAssistant.h">
+      <Filter>主对话框</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>通用</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>通用</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>通用</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>通用</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessDlg.h">
+      <Filter>进程</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessFunc.h">
+      <Filter>进程</Filter>
+    </ClInclude>
+    <ClInclude Include="DetailFunc.h">
+      <Filter>进程\进程信息</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadFunc.h">
+      <Filter>进程\进程信息</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessViewDlg.h">
+      <Filter>进程</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivilegeFunc.h">
+      <Filter>进程\进程信息</Filter>
+    </ClInclude>
+    <ClInclude Include="HandleFunc.h">
+      <Filter>进程\进程信息</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowFunc.h">
+      <Filter>进程\进程信息</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleFunc.h">
+      <Filter>进程\进程信息</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryFunc.h">
+      <Filter>进程\进程信息</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleDlg.h">
+      <Filter>模块</Filter>
+    </ClInclude>
+    <ClInclude Include="KModuleFunc.h">
+      <Filter>模块</Filter>
+    </ClInclude>
+    <ClInclude Include="KernelDlg.h">
+      <Filter>内核钩子</Filter>
+    </ClInclude>
+    <ClInclude Include="SSDTFunc.h">
+      <Filter>内核钩子\SSDT</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemDlg.h">
+      <Filter>内核</Filter>
+    </ClInclude>
+    <ClInclude Include="CallbackFunc.h">
+      <Filter>内核\系统回调</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeDlg.h">
+      <Filter>定时器</Filter>
+    </ClInclude>
+    <ClInclude Include="IOTimerFunc.h">
+      <Filter>定时器\IOTimer</Filter>
+    </ClInclude>
+    <ClInclude Include="DPCTimerFunc.h">
+      <Filter>定时器\DPCTimer</Filter>
+    </ClInclude>
+    <ClInclude Include="FilterDriverFunc.h">
+      <Filter>内核\过滤驱动</Filter>
+    </ClInclude>
+    <ClInclude Include="SysThread.h">
+      <Filter>内核\内核线程</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PCAssistantDlg.cpp">
+      <Filter>主对话框</Filter>
+    </ClCompile>
+    <ClCompile Include="PCAssistant.cpp">
+      <Filter>主对话框</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>通用</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>通用</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessDlg.cpp">
+      <Filter>进程</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessFunc.cpp">
+      <Filter>进程</Filter>
+    </ClCompile>
+    <ClCompile Include="DetailFunc.cpp">
+      <Filter>进程\进程信息</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadFunc.cpp">
+      <Filter>进程\进程信息</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessViewDlg.cpp">
+      <Filter>进程</Filter>
+    </ClCompile>
+    <ClCompile Include="PrivilegeFunc.cpp">
+      <Filter>进程\进程信息</Filter>
+    </ClCompile>
+    <ClCompile Include="HandleFunc.cpp">
+      <Filter>进程\进程信息</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowFunc.cpp">
+      <Filter>进程\进程信息</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleFunc.cpp">
+      <Filter>进程\进程信息</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryFunc.cpp">
+      <Filter>进程\进程信息</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleDlg.cpp">
+      <Filter>模块</Filter>
+    </ClCompile>
+    <ClCompile Include="KModuleFunc.cpp">
+      <Filter>模块</Filter>
+    </ClCompile>
+    <ClCompile Include="KernelDlg.cpp">
+      <Filter>内核钩子</Filter>
+    </ClCompile>
+    <ClCompile Include="SSDTFunc.cpp">
+      <Filter>内核钩子\SSDT</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemDlg.cpp">
+      <Filter>内核</Filter>
+    </ClCompile>
+    <ClCompile Include="CallbackFunc.cpp">
+      <Filter>内核\系统回调</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeDlg.cpp">
+      <Filter>定时器</Filter>
+    </ClCompile>
+    <ClCompile Include="IOTimerFunc.cpp">
+      <Filter>定时器\IOTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="DPCTimerFunc.cpp">
+      <Filter>定时器\DPCTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="FilterDriverFunc.cpp">
+      <Filter>内核\过滤驱动</Filter>
+    </ClCompile>
+    <ClCompile Include="SysThread.cpp">
+      <Filter>内核\内核线程</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PCAssistant.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\PCAssistant.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\PCAssistant.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

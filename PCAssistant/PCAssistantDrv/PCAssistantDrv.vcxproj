@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="WinDDK|Win32">
+      <Configuration>WinDDK</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="WinDDK|x64">
+      <Configuration>WinDDK</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CallBack.c" />
+    <ClCompile Include="Common.c" />
+    <ClCompile Include="DPCTimer.c" />
+    <ClCompile Include="FilterDriver.c" />
+    <ClCompile Include="GetFuncAddress.c" />
+    <ClCompile Include="GetSSSDTFuncAddress.c" />
+    <ClCompile Include="Handle.c" />
+    <ClCompile Include="IOTimer.c" />
+    <ClCompile Include="Memory.c" />
+    <ClCompile Include="Module.c" />
+    <ClCompile Include="PCAssistantDrv.c" />
+    <ClCompile Include="Privilege.c" />
+    <ClCompile Include="Process.c" />
+    <ClCompile Include="System.c" />
+    <ClCompile Include="SysThread.c" />
+    <ClCompile Include="Thread.c" />
+    <ClCompile Include="Window.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CallBack.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="DPCTimer.h" />
+    <ClInclude Include="FilterDriver.h" />
+    <ClInclude Include="GetFuncAddress.h" />
+    <ClInclude Include="GetSSSDTFuncAddress.h" />
+    <ClInclude Include="Handle.h" />
+    <ClInclude Include="IOTimer.h" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="Module.h" />
+    <ClInclude Include="PCAssistantDrv.h" />
+    <ClInclude Include="Privilege.h" />
+    <ClInclude Include="Process.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="SysThread.h" />
+    <ClInclude Include="Thread.h" />
+    <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{fa1b9ba8-7750-449c-a11d-3e4f12863459}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PCAssistantDrv</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='WinDDK|x64'">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='WinDDK|Win32'">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinDDK|Win32'">
+    <TargetExt>.sys</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+    <ExecutablePath>$(WLHBASE)\bin\x86\x86;$(WLHBASE)\bin\x86</ExecutablePath>
+    <IncludePath>$(WLHBASE)\inc\api;$(WLHBASE)\inc\crt;$(WLHBASE)\inc\ddk;$(WLHBASE)\inc</IncludePath>
+    <ReferencePath />
+    <LibraryPath>$(WLHBASE)\lib\win7\i386</LibraryPath>
+    <SourcePath />
+    <ExcludePath />
+    <TargetName>PCAssistantSys32</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='WinDDK|x64'">
+    <TargetExt>.sys</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+    <ExecutablePath>$(WLHBASE)\bin\amd64;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(WLHBASE)\inc\api;$(WLHBASE)\inc\crt;$(WLHBASE)\inc\ddk;$(WLHBASE)\inc</IncludePath>
+    <ReferencePath />
+    <LibraryPath>$(WLHBASE)\lib\win7\amd64</LibraryPath>
+    <SourcePath />
+    <ExcludePath />
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>PCAssistantSys64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='WinDDK|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_X86_;DBG=1</PreprocessorDefinitions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CallingConvention>StdCall</CallingConvention>
+      <CompileAs>CompileAsC</CompileAs>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <RemoveUnreferencedCodeData>false</RemoveUnreferencedCodeData>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ntoskrnl.lib;hal.lib;wdm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Link>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <SubSystem>Native</SubSystem>
+      <Driver>Driver</Driver>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+      <SetChecksum>true</SetChecksum>
+      <BaseAddress>0x10000</BaseAddress>
+      <RandomizedBaseAddress>
+      </RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='WinDDK|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_AMD64_=100;_X64_=1;WINVER=0x501;DBG=1</PreprocessorDefinitions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CallingConvention>StdCall</CallingConvention>
+      <CompileAs>CompileAsC</CompileAs>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ntoskrnl.lib;hal.lib;wdm.lib;ndis.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Link>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <SubSystem>Native</SubSystem>
+      <Driver>Driver</Driver>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+      <SetChecksum>true</SetChecksum>
+      <BaseAddress>0x10000</BaseAddress>
+      <RandomizedBaseAddress>
+      </RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
